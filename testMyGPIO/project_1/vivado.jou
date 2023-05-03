@@ -1,0 +1,148 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Apr 25 12:25:07 2023
+# Process ID: 15588
+# Current directory: D:/VipinSop_2018/testMyGPIO/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13908 D:\VipinSop_2018\testMyGPIO\project_1\project_1.xpr
+# Log file: D:/VipinSop_2018/testMyGPIO/project_1/vivado.log
+# Journal file: D:/VipinSop_2018/testMyGPIO/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/VipinSop_2018/testMyGPIO/project_1/project_1.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+place_ports {RMII_PHY_M_0_txd[0]} V12
+set_property IOSTANDARD LVCMOS33 [get_ports [list {RMII_PHY_M_0_txd[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list mdio_external_0_io mdio_external_0_mdc]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {RMII_PHY_M_0_rxd[1]} {RMII_PHY_M_0_rxd[0]}]]
+place_ports {RMII_PHY_M_0_txd[0]} Y17
+place_ports {RMII_PHY_M_0_rxd[0]} W16
+place_ports {RMII_PHY_M_0_rxd[1]} T17
+set_property IOSTANDARD LVCMOS33 [get_ports [list RMII_PHY_M_0_crs_dv]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list RMII_PHY_M_0_tx_en]]
+place_ports RMII_PHY_M_0_tx_en V12
+place_ports RMII_PHY_M_0_crs_dv J15
+place_ports mdio_external_0_mdc H15
+startgroup
+set_property package_pin "" [get_ports [list  mdio_external_0_mdc]]
+place_ports mdio_external_0_io H15
+endgroup
+place_ports mdio_external_0_mdc V13
+place_ports RMII_PHY_M_0_crs_dv U17
+open_bd_design {D:/VipinSop_2018/testMyGPIO/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd}
+save_constraints
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*Rx*" ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*mdio*" ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*tx*" ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*mdc*" ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*Rx*" ]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+create_debug_core u_ila_1 ila
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_1]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_1]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_1]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_1]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_1]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_1]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_1]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_1]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list design_1_i/processing_system7_0/inst/FCLK_CLK0 ]]
+set_property port_width 1 [get_debug_ports u_ila_1/clk]
+connect_debug_port u_ila_1/clk [get_nets [list design_1_i/clk_wiz_0/inst/clk_out2 ]]
+set_property port_width 1 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list design_1_i/tri_mode_ethernet_mac_0/inst/mdio_t ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list design_1_i/tri_mode_ethernet_mac_0/inst/mdc_i ]]
+set_property port_width 2 [get_debug_ports u_ila_1/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe0]
+connect_debug_port u_ila_1/probe0 [get_nets [list {design_1_i/mii_to_rmii_0/U0/RMII_AGILE.I_RX/I_RX_FIFO/Rx_fifo_output_reg[15]_0[0]} {design_1_i/mii_to_rmii_0/U0/RMII_AGILE.I_RX/I_RX_FIFO/Rx_fifo_output_reg[15]_0[1]} ]]
+save_constraints -force
+set_property needs_refresh false [get_runs impl_1]
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run impl_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/VipinSop_2018/testMyGPIO/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd]
+refresh_design
+reset_target all [get_files  D:/VipinSop_2018/testMyGPIO/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects  [get_files  D:/VipinSop_2018/testMyGPIO/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd] -sync -no_script -force -quiet
+delete_ip_run [get_files -of_objects [get_fileset sources_1] D:/VipinSop_2018/testMyGPIO/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd]
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+reset_target all [get_files  D:/VipinSop_2018/testMyGPIO/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects  [get_files  D:/VipinSop_2018/testMyGPIO/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd] -sync -no_script -force -quiet
+reset_run synth_1
+reset_target all [get_files  D:/VipinSop_2018/testMyGPIO/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects  [get_files  D:/VipinSop_2018/testMyGPIO/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd] -sync -no_script -force -quiet
+set_property synth_checkpoint_mode None [get_files  D:/VipinSop_2018/testMyGPIO/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd]
+generate_target all [get_files  D:/VipinSop_2018/testMyGPIO/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects [get_files D:/VipinSop_2018/testMyGPIO/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/VipinSop_2018/testMyGPIO/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd] -directory D:/VipinSop_2018/testMyGPIO/project_1/project_1.ip_user_files/sim_scripts -ip_user_files_dir D:/VipinSop_2018/testMyGPIO/project_1/project_1.ip_user_files -ipstatic_source_dir D:/VipinSop_2018/testMyGPIO/project_1/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/VipinSop_2018/testMyGPIO/project_1/project_1.cache/compile_simlib/modelsim} {questa=D:/VipinSop_2018/testMyGPIO/project_1/project_1.cache/compile_simlib/questa} {riviera=D:/VipinSop_2018/testMyGPIO/project_1/project_1.cache/compile_simlib/riviera} {activehdl=D:/VipinSop_2018/testMyGPIO/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+refresh_design
+reset_target all [get_files  D:/VipinSop_2018/testMyGPIO/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects  [get_files  D:/VipinSop_2018/testMyGPIO/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd] -sync -no_script -force -quiet
+set_property synth_checkpoint_mode Hierarchical [get_files  D:/VipinSop_2018/testMyGPIO/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd]
+generate_target all [get_files  D:/VipinSop_2018/testMyGPIO/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_processing_system7_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_tri_mode_ethernet_mac_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_mii_to_rmii_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_proc_sys_reset_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_xbar_0] }
+catch { config_ip_cache -export [get_ips -all design_1_axi_dma_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_clk_wiz_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_xbar_2] }
+catch { config_ip_cache -export [get_ips -all design_1_proc_sys_reset_1_0] }
+catch { config_ip_cache -export [get_ips -all design_1_proc_sys_reset_2_0] }
+catch { config_ip_cache -export [get_ips -all design_1_system_ila_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_2] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_1] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_us_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_cc_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_us_1] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_cc_1] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_3] }
+export_ip_user_files -of_objects [get_files D:/VipinSop_2018/testMyGPIO/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/VipinSop_2018/testMyGPIO/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd]
+export_simulation -of_objects [get_files D:/VipinSop_2018/testMyGPIO/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd] -directory D:/VipinSop_2018/testMyGPIO/project_1/project_1.ip_user_files/sim_scripts -ip_user_files_dir D:/VipinSop_2018/testMyGPIO/project_1/project_1.ip_user_files -ipstatic_source_dir D:/VipinSop_2018/testMyGPIO/project_1/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/VipinSop_2018/testMyGPIO/project_1/project_1.cache/compile_simlib/modelsim} {questa=D:/VipinSop_2018/testMyGPIO/project_1/project_1.cache/compile_simlib/questa} {riviera=D:/VipinSop_2018/testMyGPIO/project_1/project_1.cache/compile_simlib/riviera} {activehdl=D:/VipinSop_2018/testMyGPIO/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_bd_design {D:/VipinSop_2018/testMyGPIO/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:tri_mode_ethernet_mac:9.0 tri_mode_ethernet_mac_1
+endgroup
+delete_bd_objs [get_bd_cells tri_mode_ethernet_mac_1]
+save_bd_design

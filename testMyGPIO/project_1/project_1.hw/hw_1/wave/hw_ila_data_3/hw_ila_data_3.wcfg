@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/VipinSop_2018/testMyGPIO/project_1/project_1.hw/hw_1/wave/hw_ila_data_3/hw_ila_data_3.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="1024001fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="142"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="4" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject fp_name="design_1_i/tri_mode_ethernet_mac_0/inst/design_1_tri_mode_ethernet_mac_0_0_core/man_block.managen/conf/gen_mdio.int_ma_rx_data_reg[15]_0" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/tri_mode_ethernet_mac_0/inst/design_1_tri_mode_ethernet_mac_0_0_core/man_block.managen/conf/gen_mdio.int_ma_rx_data_reg[15]_0[0:0]</obj_property>
+      <obj_property name="ObjectShortName">gen_mdio.int_ma_rx_data_reg[15]_0[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/tri_mode_ethernet_mac_0/inst/design_1_tri_mode_ethernet_mac_0_0_core/man_block.managen/conf/gen_mdio.int_ma_rx_data_reg[15]_1" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/tri_mode_ethernet_mac_0/inst/design_1_tri_mode_ethernet_mac_0_0_core/man_block.managen/conf/gen_mdio.int_ma_rx_data_reg[15]_1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">gen_mdio.int_ma_rx_data_reg[15]_1[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/tri_mode_ethernet_mac_0/inst/design_1_tri_mode_ethernet_mac_0_0_core/man_block.managen/mdio_enabled.phy/mdio_data" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/tri_mode_ethernet_mac_0/inst/design_1_tri_mode_ethernet_mac_0_0_core/man_block.managen/mdio_enabled.phy/mdio_data[27:17]</obj_property>
+      <obj_property name="ObjectShortName">mdio_data[27:17]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/tri_mode_ethernet_mac_0/inst/design_1_tri_mode_ethernet_mac_0_0_core/man_block.managen/mdio_enabled.phy/mdio_data_1" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/tri_mode_ethernet_mac_0/inst/design_1_tri_mode_ethernet_mac_0_0_core/man_block.managen/mdio_enabled.phy/mdio_data_1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">mdio_data_1[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>

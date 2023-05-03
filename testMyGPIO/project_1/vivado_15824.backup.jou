@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Apr 18 13:34:53 2023
+# Process ID: 15824
+# Current directory: D:/VipinSop_2018/testMyGPIO/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent324 D:\VipinSop_2018\testMyGPIO\project_1\project_1.xpr
+# Log file: D:/VipinSop_2018/testMyGPIO/project_1/vivado.log
+# Journal file: D:/VipinSop_2018/testMyGPIO/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/VipinSop_2018/testMyGPIO/project_1/project_1.xpr
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+open_run impl_1
+open_bd_design {D:/VipinSop_2018/testMyGPIO/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd}
+open_run synth_1 -name synth_1
+place_ports {RMII_PHY_M_0_txd[1]} V15
+set_property IOSTANDARD LVCMOS33 [get_ports [list {RMII_PHY_M_0_txd[1]}]]
+file mkdir D:/VipinSop_2018/testMyGPIO/project_1/project_1.srcs/constrs_1/new
+close [ open D:/VipinSop_2018/testMyGPIO/project_1/project_1.srcs/constrs_1/new/constraints.xdc w ]
+add_files -fileset constrs_1 D:/VipinSop_2018/testMyGPIO/project_1/project_1.srcs/constrs_1/new/constraints.xdc
+set_property target_constrs_file D:/VipinSop_2018/testMyGPIO/project_1/project_1.srcs/constrs_1/new/constraints.xdc [current_fileset -constrset]
+save_constraints -force
+open_bd_design {D:/VipinSop_2018/testMyGPIO/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd}

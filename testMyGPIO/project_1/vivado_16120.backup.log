@@ -1,0 +1,42 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Apr 11 11:57:25 2023
+# Process ID: 16120
+# Current directory: D:/VipinSop_2018/testMyGPIO/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16044 D:\VipinSop_2018\testMyGPIO\project_1\project_1.xpr
+# Log file: D:/VipinSop_2018/testMyGPIO/project_1/vivado.log
+# Journal file: D:/VipinSop_2018/testMyGPIO/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/VipinSop_2018/testMyGPIO/project_1/project_1.xpr
+INFO: [Project 1-313] Project file moved from 'E:/VipinSop_2018/testMyGPIO/project_1' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-2] IPUserFilesDir: Could not find the directory 'D:/VipinSop_2018/testMyGPIO/project_1/project_1.ip_user_files', nor could it be found using path 'E:/VipinSop_2018/testMyGPIO/project_1/project_1.ip_user_files'.
+CRITICAL WARNING: [Board 49-67] The board_part definition was not found for digilentinc.com:zybo-z7-20:part0:1.1. This can happen sometimes when you use custom board part. You can resolve this issue by setting 'board.repoPaths' parameter, pointing to the location of custom board files. Valid board_part values can be retrieved with the 'get_board_parts' Tcl command.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+ERROR: [BD 41-69] Error sourcing TCL script: 
+    while executing
+"namespace eval ::xilinx.com_ip_aximm_1.0 { source -notrace {C:/Xilinx/Vivado/2018.3/data/rsb/busdef/AXIMM/busdef.tcl} }"
+ERROR: [BD 41-69] Error sourcing TCL script: 
+    while executing
+"source -notrace {C:/Xilinx/Vivado/2018.3/data/rsb/busdef/clock_signal/busdef.tcl} "
+    (in namespace eval "::xilinx.com_ip_clock_signal_1.0" script line 1)
+    invoked from within
+"namespace eval ::xilinx.com_ip_clock_signal_1.0 { source -notrace {C:/Xilinx/Vivado/2018.3/data/rsb/busdef/clock_signal/busdef.tcl} }"
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'design_1.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+design_1_proc_sys_reset_0_0
+design_1_processing_system7_0_0
+design_1_tri_mode_ethernet_mac_0_0
+design_1_mii_to_rmii_0_0
+design_1_clk_wiz_0_0
+
+INFO: [Common 17-344] 'open_project' was cancelled
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 11 11:59:13 2023...

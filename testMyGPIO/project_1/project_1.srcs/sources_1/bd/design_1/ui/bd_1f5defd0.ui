@@ -1,0 +1,50 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port RMII_PHY_M_0 -pg 1 -y 840 -defaultsOSRD
+preplace port DDR_0 -pg 1 -y 60 -defaultsOSRD
+preplace port mdio_external_0 -pg 1 -y 760 -defaultsOSRD
+preplace port FIXED_IO_0 -pg 1 -y 80 -defaultsOSRD
+preplace portBus phy_reset_n -pg 1 -y 690 -defaultsOSRD
+preplace inst tri_mode_ethernet_mac_0 -pg 1 -lvl 2 -y 910 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 3 -y 590 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 4 -y 650 -defaultsOSRD
+preplace inst proc_sys_reset_1 -pg 1 -lvl 3 -y 370 -defaultsOSRD
+preplace inst proc_sys_reset_2 -pg 1 -lvl 2 -y 370 -defaultsOSRD
+preplace inst mii_to_rmii_0 -pg 1 -lvl 5 -y 840 -defaultsOSRD
+preplace inst system_ila_0 -pg 1 -lvl 3 -y 940 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 1 -y 560 -defaultsOSRD
+preplace inst axi_interconnect_1 -pg 1 -lvl 4 -y 390 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 800 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 5 -y 110 -defaultsOSRD
+preplace netloc processing_system7_0_DDR 1 5 1 NJ
+preplace netloc tri_mode_ethernet_mac_0_tx_mac_aclk 1 2 2 730 260 1170
+preplace netloc processing_system7_0_M_AXI_GP0 1 0 6 20 230 NJ 230 NJ 230 NJ 230 NJ 230 2030
+preplace netloc axi_interconnect_0_M02_AXI 1 1 1 340
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 5 370 270 760 270 1140 550 NJ 550 2020
+preplace netloc tri_mode_ethernet_mac_0_rx_mac_aclk 1 1 3 340 260 720 240 1180J
+preplace netloc axi_dma_0_M_AXI_MM2S 1 3 1 1150
+preplace netloc mii_to_rmii_0_RMII_PHY_M 1 5 1 NJ
+preplace netloc tri_mode_ethernet_mac_0_mii 1 2 3 NJ 770 NJ 770 1540
+preplace netloc proc_sys_reset_2_peripheral_aresetn 1 2 2 740 250 1160J
+preplace netloc processing_system7_0_FIXED_IO 1 5 1 NJ
+preplace netloc axi_dma_0_M_AXI_S2MM 1 3 1 1130
+preplace netloc tri_mode_ethernet_mac_0_mdio_external 1 2 4 750J 760 NJ 760 NJ 760 NJ
+preplace netloc axi_interconnect_0_M00_AXI 1 1 2 NJ 540 N
+preplace netloc clk_wiz_0_clk_out2 1 1 4 330 1110 750J 860 NJ 860 N
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 0 6 30 730 360 700 770 720 1190 750 1550 690 NJ
+preplace netloc axi_dma_0_M_AXIS_MM2S 1 1 3 370 710 NJ 710 1130
+preplace netloc axi_interconnect_1_M00_AXI 1 4 1 1540
+preplace netloc M01_ACLK_1 1 0 6 20 720 350 580 750 470 1200 540 1550 220 2010
+preplace netloc tri_mode_ethernet_mac_0_m_axis_rx 1 2 1 760
+preplace netloc S00_ARESETN_1 1 3 1 1170
+levelinfo -pg 1 0 180 540 960 1370 1780 2050 -top 0 -bot 1120
+"
+}
+{
+   "da_axi4_cnt":"3",
+   "da_board_cnt":"2",
+   "da_clkrst_cnt":"4",
+   "da_ps7_cnt":"1"
+}
